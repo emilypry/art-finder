@@ -1,2 +1,2 @@
 # art-finder
-Finds me art I like via web crawling and machine learning
+Finds art that the user likes via web crawling and machine learning
