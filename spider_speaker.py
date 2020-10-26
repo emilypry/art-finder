@@ -43,4 +43,4 @@ class SpiderSpeaker:
         
         # Print confirmation
         print('Scraped page #%s' % self.last_page_scraped) 
-  
+    

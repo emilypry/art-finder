@@ -1,16 +1,15 @@
-'''The PreferenceModel class stores information about any model of the viewer's preferences
-developed through machine learning.
+'''The PreferenceModel class stores information about a model trained through SciKit Learn. Will be
+used for making predictions about whether the viewer will like a given artwork. 
 '''
 
 class PreferenceModel:
-    def __init__(self, id_num=0, theta=[], solver='', C=0, set_train=[], set_cv=[], set_test=[],
+    def __init__(self, theta=[], solver='', C=0, set_train=[], set_cv=[], set_test=[],
                  error_train=0, error_cv=0, error_test=0, precision_train=[],
                  recall_train=[], f1_train=0, precision_cv=[], recall_cv=[], f1_cv=0, precision_test=[],
                  recall_test=[], f1_test=0, accuracy_train=0, accuracy_cv=0, accuracy_test=0):
-        self.id_num = id_num  # The ID for this model
-        self.theta = theta  # Unrolled vector (list) of theta values
-        self.solver = solver  # Which scikit learn solver was used to develop the model
-        self.C = C  # The regularization parameter used when developing the model
+        self.theta = theta 
+        self.solver = solver 
+        self.C = C  
         self.set_train = set_train  # A list of the IDs of the Artworks in the training set
         self.set_cv = set_cv  # A list of the IDs of the Artworks in the cross validation set
         self.set_test = set_test  # A list of the IDs of the Artworks in the testing set

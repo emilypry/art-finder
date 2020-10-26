@@ -4,8 +4,8 @@ in the permanent database.
 '''
 
 class Artwork:
-    def __init__(self, ID='', like='', artist='', info='', title='',
-                 nga_link='', nga_id='', nga_page='', added='', original_name='', vector=''):
+    def __init__(self, ID=0, like=0, artist='', info='', title='',
+                 nga_link='', nga_id=0, nga_page=0, added='', original_name='', vector=[]):
         self.ID = ID
         self.like = like
         self.artist = artist

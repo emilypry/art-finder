@@ -1,7 +1,11 @@
+'''This contains the Pipelines that the ArtSpider will use to save images and information about
+scraped Artworks. (Be sure to fill in the location of the freshly_scraped_artwork.csv manually
+in the CsvPipeline, since it will not be created elsewhere.) 
+'''
+
 import scrapy
 from itemadapter import ItemAdapter
 from scrapy.exporters import CsvItemExporter
-
 
 class ArtspiderPipeline:
     def process_item(self, item, spider):
