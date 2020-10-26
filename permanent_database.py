@@ -79,6 +79,7 @@ class PermanentDatabase:
         '''Deletes all artworks from database.
         '''
         self.artworks = []
+        self.number_of_artworks = 0
     
     def import_database(self, database_txt):
         '''Imports a database from a database.txt file.
