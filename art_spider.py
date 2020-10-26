@@ -1,10 +1,11 @@
+'''This contains the ArtSpider and ArtSpiderItem classes. ArtSpider will scrape artworks from the
+National Gallery of Art website, saving them as distinct ArtSpiderItmems.
+'''
+
 import scrapy
-#from scrapy.crawler import CrawlerProcess
 
 class ArtSpider(scrapy.Spider):
-    name = 'art_spider'
-    #page = 1
-    
+    name = 'art_spider'    
     custom_settings = { 'DOWNLOAD_DELAY': 1,
                         'ITEM_PIPELINES': {'scrapy.pipelines.images.ImagesPipeline':1,
                                            'custom_pipeline.CsvPipeline':300},
@@ -82,11 +83,3 @@ class ArtspiderItem(scrapy.Item):
     image_urls = scrapy.Field()
     images = scrapy.Field()
     page_num = scrapy.Field()
-'''
-if __name__ == "__main__":
-    process = CrawlerProcess()
-    # Override default page number here
-    process.crawl(ArtSpider, page=3)
-    process.start()
-'''
-  
