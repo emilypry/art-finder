@@ -181,7 +181,7 @@ def train_model(database, models_txt, quick):
     ending_time = time.perf_counter()
     length = f'{(ending_time - beginning_time)/60:.2f}'
     
-    # Add the model to models.csv
+    # Add the model to models.txt
     export_model(model, models_txt, X_train, y_train, X_cv, y_cv, X_test, y_test, quick, length)
     
     # Print verification
