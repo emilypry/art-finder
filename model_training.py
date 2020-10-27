@@ -217,7 +217,7 @@ def get_solver_and_c(models_txt):
             break
         i+=1
     
-    return solver, C
+    return solver, float(C)
 
 def get_theta(models_txt):
     '''Gets the values of theta from the latest model in models.txt.
