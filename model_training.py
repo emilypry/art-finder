@@ -131,16 +131,13 @@ def export_model(model, models_txt, X_train, y_train, X_cv, y_cv, X_test, y_test
     # The time at which the model was exported
     time = datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S")
     
-    # Whether the model was trained quickly or slowly
-    speed = quick
-    
     # Turn theta from a numpy array to an unrolled list 
     theta = list(theta.ravel())
     
     # Make lists of the values that must be rounded off and those that don't
     must_round = [error_train, error_cv, error_test, acc_train, acc_cv, acc_test,
                   prec_disliked, rec_disliked, f1_disliked, prec_liked, rec_liked, f1_liked]
-    rest = [m_train, m_cv, m_test, solver, C, time, speed, time_to_train, theta]
+    rest = [m_train, m_cv, m_test, solver, C, time, quick, time_to_train, theta]
         
     # Add the model_info as a new row in models.csv
     file = open(models_txt, 'a')
