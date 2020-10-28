@@ -12,9 +12,6 @@ class SpiderSpeaker:
         '''Reads the previously scraped page (stored in page.txt) and runs the spider on a new
         page. Rewrites the new page number in page.txt and updates last_page_scraped
         '''
-        # Make the current page to be scraped 1 higher than was previously scraped
-        #self.update_current_page(page_txt)
-        
         # Read the last page scraped in page.txt
         page_to_scrape = 0
         page = open(page_txt, 'r')
