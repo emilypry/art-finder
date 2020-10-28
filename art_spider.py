@@ -18,7 +18,11 @@ class ArtSpider(scrapy.Spider):
     # To run from command line at a certain page,
     #  scrapy crawl art_spider -a page=5
     def start_requests(self):
-        yield scrapy.Request('https://images.nga.gov/en/search/do_advanced_search.html?form_name=default&all_words=&exact_phrase=&exclude_words=&artist_last_name=&keywords_in_title=&accession_number=&school=&Classification=&medium=&year=&year2=&open_access=Open%20Access%20Available&q=&mime_type=&qw=%22Open+Access+Available%22&page={}&grid_layout=1'.format(self.page),
+        yield scrapy.Request('https://images.nga.gov/en/search/do_advanced_search.html?form_name' \
+                             '=default&all_words=&exact_phrase=&exclude_words=&artist_last_name' \
+                             '=&keywords_in_title=&accession_number=&school=&Classification=&medium' \
+                             '=&year=&year2=&open_access=Open%20Access%20Available&q=&mime_type' \
+                             '=&qw=%22Open+Access+Available%22&page={}&grid_layout=1'.format(self.page),
                              meta={'this_page':self.page})
     def parse(self, response):
         all_ids = []
